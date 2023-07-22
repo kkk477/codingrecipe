@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>updateBoard</title>
+</head>
+<body>
+<form action="/board/update" method="post" th:object="${boardUpdate}">
+  <input type="hidden" th:field="*{id}">
+  writer: <input type="text" th:field="*{boardWriter}"> <br>
+  pass: <input type="text" th:field="*{boardPass}"> <br>
+  title: <input type="text" th:field="*{boardTitle}"> <br>
+  contents: <textarea th:field="*{boardContents}" cols="30" rows="10"></textarea>
+  <input type="hidden"  th:field="*{boardHits}">
+  <input type="submit" value="글수정">
+</form>
+</body>
+</html>
