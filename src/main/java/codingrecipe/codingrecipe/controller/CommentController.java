@@ -21,7 +21,7 @@ public class CommentController {
     private final CommentService commentService;
 
     @PostMapping("/save")
-    public ResponseEntity save(@ModelAttribute CommentDto commentDto) {
+    public ResponseEntity<?> save(@ModelAttribute CommentDto commentDto) {
         System.out.println("commentDto = " + commentDto);
         Long saveResult = commentService.save(commentDto);
 
